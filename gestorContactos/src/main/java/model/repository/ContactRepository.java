@@ -55,5 +55,19 @@ public class ContactRepository {
 	public void deleteContact(String id) {
 		contacts.remove(id);
 	}
+        
+        public Map<String,Contact> getMobileContacts(){
+            Map<String, Contact> mobileContacts = new HashMap<String, Contact>();
+            Contact contact = null;
+            
+            for(String id: contacts.keySet()){
+                contact = contacts.get(id);
+                if(contact.getTelephone().startsWith("6")){
+                    mobileContacts.put(id, contact);
+                }
+            }
+            
+            return mobileContacts;
+        }
 
 }

@@ -2,32 +2,32 @@
 <%@include file="includes/header.jsp"%>
 
 <body>
-	<h1>Contact Book</h1>
+    <h1>Contact Book</h1>
 
-	<div class="container">
-	
-		<p>${message}</p>
-				
-		<table id="agenda">
-			<tr>
-				<th>Name</th>
-				<th>Phone number</th>
-				<th>Actions</th>
-			</tr>
+    <div class="container">
+        <p>${message}</p>
 
-			<c:forEach items="${requestScope.contacts}" var="entry">
-				<tr>
-					<td><c:out value="${entry.value.name}" /></td>
-					<td><c:out value="${entry.value.telephone}" /></td>
-					<td><a href="contactupdate?id=${entry.value.id}"><img src="./images/edit.png" width="30px"></a> 
-						<a href="contactdelete?id=${entry.value.id}"><img src="./images/delete.png" width="30px"></a></td>
-				</tr>
-			</c:forEach>
-		</table>
-		<div class="bottom_links">
-			<a href="contactEditView.jsp" class="button">New contact</a>
-		</div>
-	</div>
+        <table id="agenda">
+            <tr>
+                <th>Name</th>
+                <th>Phone number</th>
+                <th>Actions</th>
+            </tr>
 
-	<!-- footer -->
-	<%@include file="includes/footer.jsp"%>
+            <c:forEach items="${requestScope.contacts}" var="entry">
+                <tr>
+                    <td><c:out value="${entry.value.name}" /></td>
+                    <td><c:out value="${entry.value.telephone}" /></td>
+                    <td><a href="contactupdate?id=${entry.value.id}"><img src="./images/edit.png" width="30px"></a> 
+                        <a href="contactdelete?id=${entry.value.id}"><img src="./images/delete.png" width="30px"></a></td>
+                </tr>
+            </c:forEach>
+        </table>
+        <div class="bottom_links">
+            <a href="contactEditView.jsp" class="button">Nuevo Contacto</a>
+            <a href="contactlistphones" class="button">Contactos Móviles</a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <%@include file="includes/footer.jsp"%>

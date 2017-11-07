@@ -28,17 +28,20 @@ public class ContactListController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		// Load contacts
-		ContactRepository repository = ContactRepository.getInstance();
-		Map<String,Contact> contacts = repository.getContacts();
-		
-		 log.log(Level.FINE, "Processing GET request:  " + contacts.size() + " contacts loaded.");
-		
-		// Send contacts to index.jsp
-		request.setAttribute("contacts", contacts);
-		request.getRequestDispatcher("/contactListView.jsp").forward(request, response);
-	
+            
+            // Load contacts
+            ContactRepository repository = ContactRepository.getInstance();
+            Map<String,Contact> contacts = repository.getContacts();
+            
+            for(String clave:contacts.keySet()){
+                System.out.println(contacts.get(clave).getName());
+            }
+            
+            log.log(Level.FINE, "Processing GET request: " + contacts.size() + " contacts loaded.");
+            
+            // Send contacts to index.jsp
+            request.setAttribute("contacts", contacts);
+            request.getRequestDispatcher("/contactListView.jsp").forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

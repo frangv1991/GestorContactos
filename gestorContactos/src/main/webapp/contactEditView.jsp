@@ -3,7 +3,8 @@
 
 <body>
 	<h1>Contact Book</h1>
-
+        
+        <p>${message}</p>
 	
 	<% String controller = "contactnew"; %>
 	

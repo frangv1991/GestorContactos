@@ -1,58 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-	version="2.5">
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
 
-  <!--  Contact list controller -->
-	<servlet>
-		<servlet-name>ContactListController</servlet-name>
-		<servlet-class>controller.ContactListController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ContactListController</servlet-name>
-		<url-pattern>/contactlist</url-pattern>
-	</servlet-mapping>
+    <!--  Contact list controller -->
+    <servlet>
+        <servlet-name>ContactListController</servlet-name>
+        <servlet-class>controller.ContactListController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactListController</servlet-name>
+        <url-pattern>/contactlist</url-pattern>
+    </servlet-mapping>
 	
-	<!-- Contact update controller -->
-	<servlet>
-		<servlet-name>ContactUpdateController</servlet-name>
-		<servlet-class>controller.ContactUpdateController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ContactUpdateController</servlet-name>
-		<url-pattern>/contactupdate</url-pattern>
-	</servlet-mapping>
+    <!-- Contact update controller -->
+    <servlet>
+        <servlet-name>ContactUpdateController</servlet-name>
+        <servlet-class>controller.ContactUpdateController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactUpdateController</servlet-name>
+        <url-pattern>/contactupdate</url-pattern>
+    </servlet-mapping>
 
-	<!-- Contact delete controller -->
-	<servlet>
-		<servlet-name>ContactDeleteController</servlet-name>
-		<servlet-class>controller.ContactDeleteController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ContactDeleteController</servlet-name>
-		<url-pattern>/contactdelete</url-pattern>
-	</servlet-mapping>
+    <!-- Contact delete controller -->
+    <servlet>
+        <servlet-name>ContactDeleteController</servlet-name>
+        <servlet-class>controller.ContactDeleteController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactDeleteController</servlet-name>
+        <url-pattern>/contactdelete</url-pattern>
+    </servlet-mapping>
 	
-	<!-- Contact new controller -->
-	<servlet>
-		<servlet-name>ContactNewController</servlet-name>
-		<servlet-class>controller.ContactNewController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ContactNewController</servlet-name>
-		<url-pattern>/contactnew</url-pattern>
-	</servlet-mapping>
+    <!-- Contact new controller -->
+    <servlet>
+        <servlet-name>ContactNewController</servlet-name>
+        <servlet-class>controller.ContactNewController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactNewController</servlet-name>
+        <url-pattern>/contactnew</url-pattern>
+    </servlet-mapping>
+        
+    <!-- Contact list phones controller -->
+    <servlet>
+        <servlet-name>ContactListPhonesController</servlet-name>
+        <servlet-class>controller.ContactListPhonesController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactListPhonesController</servlet-name>
+        <url-pattern>/contactlistphones</url-pattern>
+    </servlet-mapping>
 
-	<!-- Welcome page -->
-	<welcome-file-list>
-		<welcome-file>contactlist</welcome-file>
-	</welcome-file-list>
+    <!-- Welcome page -->
+    <welcome-file-list>
+        <welcome-file>contactlist</welcome-file>
+    </welcome-file-list>
 	
-	<!-- Error page -->
-	<error-page>
-		<exception-type>java.lang.Throwable</exception-type>
-		<location>/error.jsp</location>
-	</error-page>
+    <!-- Error page -->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
 
 </web-app>
